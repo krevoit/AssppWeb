@@ -9,6 +9,10 @@ wisp.options.hostname_whitelist = [
   /^init\.itunes\.apple\.com$/,
   /^p\d+-buy\.itunes\.apple\.com$/,
   /^downloaddispatch\.itunes\.apple\.com$/,
+  // SAP key-exchange endpoints (bag: sign-sap-setup, sign-sap-setup-cert)
+  // are advertised on Apple static content hosts (observed: s.mzstatic.com).
+  // Same trust class as the rest of the allowlist: Apple-owned, port 443.
+  /^[a-z0-9-]+\.mzstatic\.com$/,
 ];
 wisp.options.port_whitelist = [443];
 wisp.options.allow_direct_ip = false;
