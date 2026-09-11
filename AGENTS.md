@@ -170,6 +170,7 @@ The Wisp server validates target hosts via `hostname_whitelist` in `backend/src/
 - `/^p\d+-buy\.itunes\.apple\.com$/` — pod-based hosts
 - `downloaddispatch.itunes.apple.com` — redownload dispatch endpoint (failureType 5002 fallback)
 - `/^[a-z0-9-]+\.mzstatic\.com$/` — SAP key-exchange endpoints (bag `sign-sap-setup` / `sign-sap-setup-cert`, observed on `s.mzstatic.com`)
+- `fpinit.itunes.apple.com` — SAP setup host advertised by the bag
 - Port restricted to `443` only
 - Direct IP targets blocked (`allow_direct_ip = false`)
 - Loopback IP targets blocked (`allow_loopback_ips = false`)
